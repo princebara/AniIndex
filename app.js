@@ -17,12 +17,12 @@ const body = document.body;
 darkModeBtn.addEventListener("click", () => {
 
     if (darkModeBtn.src.endsWith("night-mode.png")) {
-        darkModeBtn.src = "/media/icon/brightness.png";
+        darkModeBtn.src = "media/icon/brightness.png";
         header.style.backgroundColor = "var(--secondary-background)";
         body.style.backgroundColor = "var(--secondary-background)";
 
     }else{
-        darkModeBtn.src = "/media/icon/night-mode.png";
+        darkModeBtn.src = "media/icon/night-mode.png";
         header.style.backgroundColor = "var(--main-background)";
         body.style.backgroundColor = "var(--main-background)";
     }
@@ -180,7 +180,6 @@ function renderRecents() {
 }
 
 renderRecents();
-
 
 
 
