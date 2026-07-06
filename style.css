@@ -1,0 +1,351 @@
+/*setup*/
+:root{
+    --main-color: #3D5A80;
+    --secondary-color: #98C1D9;
+    --main-background: hsl(190, 20%, 90%);
+    --secondary-background: #293241;
+    --main-font: "mainFont";
+}
+
+@font-face {
+        font-family: mainFont;
+        src: url(/media/font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf) format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+body{
+    background-color: var(--main-background);
+}
+
+/*header section*/
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-background);
+    z-index: 1000;
+}
+
+.recentlogo, #viewmode{
+    height: 40px;
+    width: 40px;
+}
+
+.recentlogo{
+    justify-self: start;
+    margin-left: 20px;
+}
+
+.headlogo{
+    justify-self: center;
+}
+
+.homebtn{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.headlogo1, .headlogo2{
+    font-family: var(--main-font), sans-serif;
+    color: var(--main-color);
+}
+
+.headlogo1{
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.headlogo2{
+    color: var(--secondary-color);
+}
+
+#viewmode{
+    justify-self: end;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/*homepage section*/
+
+.home{
+    display: flex;
+    flex-direction: column;
+    margin: 80px;
+    align-items: center;
+}
+
+.homelogo{
+    display: flex;
+    flex-direction: row;
+}
+
+.homelogo1, .homelogo2{
+    font-family: var(--main-font, sans-serif);
+    font-size: 8rem;
+    text-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.518);
+}
+
+.homelogo1{
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.homelogo2{
+    color: var(--secondary-color);
+}
+
+#searchForm{
+    display: flex;
+    align-items: center;
+}
+
+#searchInput{
+    width: 400px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    font-family: var(--main-font), sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: white;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    ;
+}
+
+#searchInput::placeholder{
+    color: var(--main-color);
+}
+
+button{
+    text-decoration: none;
+    background: none;
+    border: none;
+    margin-left: 30px
+}
+
+.searchbtn{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.searchbtn, .headlogo, .recentlogo, #viewmode{
+    transition: 0.5s ease;
+}
+
+/*footer section*/
+
+.footer{
+    position: relative;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    font-family: var(--main-font);
+    font-size: 1.1rem;
+    color: var(--main-color);
+    z-index: 1;
+}
+
+/*recent section*/
+
+#recent {
+    position: fixed;
+    top: 70px;
+    left: -290px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: var(--main-background);
+    transition: left 0.3s ease;
+    padding: 10px;
+    box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.452);
+    z-index: 1000;
+}
+
+#recent.open {
+    left: 0;
+}
+
+.recenttext{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    padding: 10px;
+}
+
+/*result section*/
+#infoPage, #resultPage {
+    margin-top: 100px;
+}
+
+#resultContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 70px;
+}
+
+#resultbackBtn, #homebackBtn {
+    display: block;
+    background: var(--main-color);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.resultimg{
+    width: 160px;
+    border-radius: 10px;
+
+}
+
+.resultname{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    width: 120px;
+}
+
+.anime-card{
+    transition: 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/*info section*/
+
+#infoContainer {
+    padding: 40px;
+}
+
+.info-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.info-left {
+    flex: 0 0 300px;
+}
+
+.infoimg {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.info-right {
+    flex: 1;
+    font-family: var(--main-font);
+    color: var(--main-color);
+}
+
+.infotitle {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.infosyn {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/*responsiveness*/
+
+@media (max-width: 1024px) {
+    #resultContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+@media (max-width: 768px) {
+    #resultContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #resultContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .anime-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .home{
+    margin: 270px auto;
+}
+
+.homelogo1, .homelogo2{
+    font-size: 3rem;
+}
+
+#searchInput{
+    width: 200px;
+    height: 20px;
+    font-size: 1rem;
+    ;
+}
+
+.footer{
+    position: relative;
+    font-size: 0.7rem;
+}
+
+#infoContainer {
+    padding: 40px;
+}
+
+.info-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.info-left {
+    flex: 0 0 300px;
+}
+
+.infoimg {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.info-right {
+    flex: 1;
+    font-family: var(--main-font);
+    color: var(--main-color);
+}
+}
+
+@media (hover: hover) {
+    .searchbtn:hover, .headlogo:hover, .recentlogo:hover, #viewmode:hover{
+    transform: translateY(-10px);
+}
+
+    #resultbackBtn:hover, #homebackBtn:hover {
+    transform: translateY(-15px);
+}
+
+.anime-card:hover{
+    transform: translateY(-15px);
+}
+}

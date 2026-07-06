@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniIndex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--header section-->
+
+    <header class="header" id="header">
+        <a id="recentBtn" class="recentbtn" href="#recent">
+            <img class="recentlogo" src="/media/icon/clock.png" alt="recent">
+        </a>
+        <div class="headlogo">
+            <a class="homebtn" href="#homePage">
+                <h3 class="headlogo1">Ani</h3><h3 class="headlogo2">Index</h3>
+            </a>           
+        </div>
+        <img id="viewmode" src="/media/icon/night-mode.png" alt="night/dark">
+    </header>
+
+    <!--recent section-->
+
+    <aside id="recent">
+        <div class="recentcontent">
+            
+        </div>
+    </aside>
+
+    <!--homepage section-->
+
+    <section class="home" id="homePage">
+        <div class="homelogo">
+            <h1 class="homelogo1">Ani</h1><h1 class="homelogo2">Index</h1>
+        </div>
+        <form id="searchForm">
+            <input id="searchInput" type="text" placeholder="Enter Anime Name">
+            <button type="submit">
+                <img class="searchbtn" src="/media/icon/search.png" alt="">
+            </button>
+        </form>
+        <div id="result">
+
+        </div>
+    </section>
+
+    <!--search/results section-->
+
+    <section id="resultPage" style="display: none;">
+        <button id="homebackBtn">← Back</button>
+        <div id="resultContainer">
+            
+        </div>
+    </section>
+
+    <!--info/view section-->
+
+    <section id="infoPage" style="display: none;">
+        <button id="resultbackBtn">← Back</button>
+        <div id="infoContainer">
+            
+        </div>
+    </section>
+
+    <!--footer section-->
+
+    <footer class="footer">
+        <p class="footertext">Built and Designed by Prince Baranyizigiye.<br>All rights reserved. ©</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
