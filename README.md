@@ -2,6 +2,8 @@
 
 AniIndex is a responsive anime search tool built with HTML, CSS, and JavaScript, powered by the Jikan REST API. It allows users to search for anime, browse results, view information, and view of recently viewed titles.
 
+You can view the site: https://princebara.github.io/AniIndex/
+
 <img width="1918" height="970" alt="Screenshot 2026-07-06 172621" src="https://github.com/user-attachments/assets/61e1213e-7589-48dc-981d-20942e7b7770" />
 
 Features:
