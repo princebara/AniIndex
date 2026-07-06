@@ -9,7 +9,7 @@
 
 @font-face {
         font-family: mainFont;
-        src: url(/media/font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf) format("truetype");
+        src: url(media/font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf) format("truetype");
         font-weight: normal;
         font-style: normal;
     }
